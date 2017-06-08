@@ -1,0 +1,71 @@
+
+<div id="services" class="container-fluid text-center">
+
+  <div id="volunteer" class="container-fluid">
+      <div class="text-center">
+          <h2>Volunteer</h2>
+          <h4>Please complete the form below to start connecting with volunteer opportunities.</h4>
+      </div>
+      <div class="text-left">
+          <form role="form" id="memberForm">
+                <div class="form-group" >
+
+                
+
+                    <label for="first_name">First Name</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name">
+
+                    <label for="last_name">Last Name</label>
+                    <input type="text"  class="form-control" id="last_name" name="last_name">
+                    
+                    <label for="email">Email Address:</label>
+                    <input type="email" class="form-control" id="email" name="email">
+
+                    <label for="address1">Address</label>
+                    <input type="text" class="form-control" id="address1" name="address1">
+
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" name="city">
+
+                    <label for="state">State</label>
+                    <input type="text" class="form-control" id="state" name="state">
+
+                    <label for="zipcode">Zipcode</label>
+                    <input type="text" class="form-control" id="zipcode" name="zipcode">
+
+                    <!--<fieldset>-->
+                    <label for="phones">Mobile</label>
+                    <input type="text" class="form-control" id="mobile" name="phones[mobile]">
+        
+                    <!--</fieldset>-->
+                    
+                    <label for="cause" id="causesInterestedIn">Causes That Interest You</label>
+                    <p>Control+ click to select more than one</p>
+                        <select data-placeholder="Choose your causes" class="form-control" multiple tabindex="4">
+                        <option value="arts">Arts and Culture</option>
+                        <option value="animals">Animal Welfare</option>
+                        <option value="CivicsandCommunity">Civics and Community</option>
+                        <option value="CommunityEducation">Community Education</option>
+                        <option value="SeniorServices">Senior Services</option>
+                    </select>
+
+                    <!--<label for="role">Role</label>-->
+                    <input type="hidden" class="form-control" id="role" name="role" value="MEMBER">
+
+                    <label for="birthdate">Birth Date: </label>
+                    <p> Some volunteer activities may have a minimum age requirement</p>
+                    <input type="date" class="form-control" id="birthdate" name="birthdate">
+                </div>
+                <button id="memberButton" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+
+
+
+  
+
+
+
+
+
