@@ -5,9 +5,7 @@ import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { MapFormPageComponent } from './map-form-page/map-form-page.component';
 import { HeaderComponent } from './header/header.component';
-import { MapPageComponent } from './map-page/map-page.component';
 import { FeaturesPageComponent } from './features-page/features-page.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -17,14 +15,14 @@ import { EventsComponent } from './events/events.component';
 import { OrganizeComponent } from './organize/organize.component';
 import { TrainingComponent } from './training/training.component';
 import { StatsComponent } from './stats/stats.component';
+import { MapComponent } from './map/map.component';
+import { LocationFormComponent } from './location-form/location-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapFormPageComponent,
     HeaderComponent,
-    MapPageComponent,
     FeaturesPageComponent,
     AboutComponent,
     HomeComponent,
@@ -33,7 +31,9 @@ import { StatsComponent } from './stats/stats.component';
     EventsComponent,
     OrganizeComponent,
     TrainingComponent,
-    StatsComponent
+    StatsComponent,
+    MapComponent,
+    LocationFormComponent
   ],
   imports: [
     BrowserModule,
