@@ -20,6 +20,7 @@ import { MapComponent } from './map/map.component';
 import { LocationFormComponent } from './location-form/location-form.component';
 import { OrganizeSidebarComponent } from './organize-sidebar/organize-sidebar.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
+import { HomeFooterComponent } from './home-footer/home-footer.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
     MapComponent,
     LocationFormComponent,
     OrganizeSidebarComponent,
-    JumbotronComponent
+    JumbotronComponent,
+    HomeFooterComponent
   ],
   imports: [
     BrowserModule,

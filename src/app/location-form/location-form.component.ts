@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationFormComponent implements OnInit {
 
+  distances:[any] = [5, 10, 25, 50];
+
   constructor() { }
 
   ngOnInit() {
