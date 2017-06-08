@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './app.routes';
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,6 +19,7 @@ import { StatsComponent } from './stats/stats.component';
 import { MapComponent } from './map/map.component';
 import { LocationFormComponent } from './location-form/location-form.component';
 import { OrganizeSidebarComponent } from './organize-sidebar/organize-sidebar.component';
+import { JumbotronComponent } from './jumbotron/jumbotron.component';
 
 
 @NgModule({
@@ -35,14 +37,15 @@ import { OrganizeSidebarComponent } from './organize-sidebar/organize-sidebar.co
     StatsComponent,
     MapComponent,
     LocationFormComponent,
-    OrganizeSidebarComponent
+    OrganizeSidebarComponent,
+    JumbotronComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true }),
-    // AgmCoreModule.forRoot({
-    //   apiKey: 'AIzaSyCVX2yvf9wYcaQVJpG1YC8P__g0YVKnhNw'
-    // })
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCVX2yvf9wYcaQVJpG1YC8P__g0YVKnhNw'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

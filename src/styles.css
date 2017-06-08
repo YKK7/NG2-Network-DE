@@ -239,3 +239,8 @@ footer .glyphicon {
     font-size: 150px;
   }
 }
+
+.sebm-google-map-container {
+  height: 400px;
+  width: 70%;
+}
