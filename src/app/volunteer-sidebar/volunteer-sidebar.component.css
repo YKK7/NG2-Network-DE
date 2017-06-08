@@ -28,8 +28,8 @@
     position: fluid;
     top: 0%;
     right: 0%;
-    font-size: 36px;
-    margin-left: 50px;
+    font-size: 28px;
+    margin-left: 80%;
 }
 
 .slideanim {visibility:hidden;}
@@ -40,3 +40,7 @@
             -webkit-animation-duration: 1s;
             visibility: visible;
         }
+#resource {
+  transition: margin-left .5s;
+  padding: 0px;
+}
