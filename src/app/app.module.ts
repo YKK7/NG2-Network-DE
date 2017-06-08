@@ -17,6 +17,7 @@ import { TrainingComponent } from './training/training.component';
 import { StatsComponent } from './stats/stats.component';
 import { MapComponent } from './map/map.component';
 import { LocationFormComponent } from './location-form/location-form.component';
+import { OrganizeSidebarComponent } from './organize-sidebar/organize-sidebar.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { LocationFormComponent } from './location-form/location-form.component';
     TrainingComponent,
     StatsComponent,
     MapComponent,
-    LocationFormComponent
+    LocationFormComponent,
+    OrganizeSidebarComponent
   ],
   imports: [
     BrowserModule,
