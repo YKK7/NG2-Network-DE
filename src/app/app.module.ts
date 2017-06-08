@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
 import { MapFormPageComponent } from './map-form-page/map-form-page.component';
 import { HeaderComponent } from './header/header.component';
 import { MapPageComponent } from './map-page/map-page.component';
@@ -14,12 +13,15 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { VolunteerComponent } from './volunteer/volunteer.component';
 import { DonateComponent } from './donate/donate.component';
+import { EventsComponent } from './events/events.component';
+import { OrganizeComponent } from './organize/organize.component';
+import { TrainingComponent } from './training/training.component';
+import { StatsComponent } from './stats/stats.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
     MapFormPageComponent,
     HeaderComponent,
     MapPageComponent,
@@ -27,7 +29,11 @@ import { DonateComponent } from './donate/donate.component';
     AboutComponent,
     HomeComponent,
     VolunteerComponent,
-    DonateComponent
+    DonateComponent,
+    EventsComponent,
+    OrganizeComponent,
+    TrainingComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
