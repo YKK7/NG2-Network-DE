@@ -8,8 +8,6 @@ import { StatsComponent } from './stats/stats.component';
 import { OrganizeComponent } from './organize/organize.component';
 import { EventsComponent } from './events/events.component';
 
-
-
 export const rootRouterConfig: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
@@ -20,8 +18,4 @@ export const rootRouterConfig: Routes = [
     { path: 'stats', component: StatsComponent },
     { path: 'events', component: EventsComponent },
     { path: 'organize', component: OrganizeComponent }
-
-
-
-
 ];
