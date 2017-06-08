@@ -22,7 +22,6 @@ import { OrganizeSidebarComponent } from './organize-sidebar/organize-sidebar.co
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
