@@ -7,20 +7,20 @@
                 <span class="icon-bar"></span>
             </button>
             <div class="text-left">
-      <a class="navbar-brand"><img src="http://www.thenetworkde.org/wp-content/uploads/2017/01/nd-logo-invert.png" alt="DE~ Volunteer~ Portal" style="width:200px;height:50px;align-content:left; ">
+      <a class="navbar-brand" [routerLink]="['/']"><img src="http://www.thenetworkde.org/wp-content/uploads/2017/01/nd-logo-invert.png" alt="DE~ Volunteer~ Portal" style="width:200px;height:50px;align-content:left; ">
       </a>  
       </div>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a>HOME</a></li>
-        <li><a>ABOUT</a></li>
-        <li><a href="donor.html">DONATE</a></li>
-        <li><a href="volunteer.html">VOLUNTEER</a></li>
-        <li><a href="events.html">EVENTS</a></li>
-        <li><a href="orgarnize.html">ORGANIZE</a></li>
-        <li><a href="training.html">TRAINING</a></li>
-        <li><a href="stats.html">STATISTICS</a></li>
+        <li><a [routerLink]="['/']">HOME</a></li>
+        <li><a [routerLink]="['/about']">ABOUT</a></li>
+        <li><a [routerLink]="['/donate']">DONATE</a></li>
+        <li><a [routerLink]="['/volunteer']">VOLUNTEER</a></li>
+        <li><a [routerLink]="['/events']">EVENTS</a></li>
+        <li><a [routerLink]="['/organize']">ORGANIZE</a></li>
+        <li><a [routerLink]="['/training']">TRAINING</a></li>
+        <li><a [routerLink]="['/stats']">STATISTICS</a></li>
       </ul>
     </div>
   </div>
