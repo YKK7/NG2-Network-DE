@@ -1,9 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { RouterModule } from '@angular/router';
-import { rootRouterConfig } from './app.routes';
-
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MapFormPageComponent } from './map-form-page/map-form-page.component';
