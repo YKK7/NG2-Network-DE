@@ -1,8 +1,4 @@
-body {
-  font: 400 15px Lato, sans-serif;
-  line-height: 1.8;
-  color: #818181;
-}
+
 h2 {
   font-size: 24px;
   text-transform: uppercase;
@@ -195,4 +191,24 @@ footer .glyphicon {
     font-size: 150px;
   }
 }
+
+tr{
+  border-color:cadetblue;
+
+}
+
+body{
+  border-color:cadetblue;
+
+}
+th{
+  color:cadetblue;
+  text-align: center;
+
+}
+table{
+  margin-left: 150px;
+  padding: 50px;
+}
+
 
