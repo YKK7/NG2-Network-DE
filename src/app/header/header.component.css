@@ -19,8 +19,8 @@
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
-  color: #f4511e !important;
-  background-color: #588c9f !important;
+  color: #588c9f !important;
+  background-color: #ffffff !important;
 }
 
 .navbar-default .navbar-toggle {
