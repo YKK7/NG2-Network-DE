@@ -14,14 +14,14 @@
     </div>
     <div class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a [routerLink]="['/']">HOME</a></li>
-        <li><a [routerLink]="['/about']">ABOUT</a></li>
-        <li><a [routerLink]="['/donate']">DONATE</a></li>
-        <li><a [routerLink]="['/volunteer']">VOLUNTEER</a></li>
-        <li><a [routerLink]="['/events']">EVENTS</a></li>
-        <li><a [routerLink]="['/organize']">ORGANIZE</a></li>
-        <li><a [routerLink]="['/training']">TRAINING</a></li>
-        <li><a [routerLink]="['/stats']">STATISTICS</a></li>
+        <li (click)="toggleState()"><a [routerLink]="['/']">HOME</a></li>
+        <li (click)="toggleState()"><a [routerLink]="['/about']">ABOUT</a></li>
+        <li (click)="toggleState()"><a [routerLink]="['/donate']">DONATE</a></li>
+        <li (click)="toggleState()"><a [routerLink]="['/volunteer']">VOLUNTEER</a></li>
+        <li (click)="toggleState()"><a [routerLink]="['/events']">EVENTS</a></li>
+        <li (click)="toggleState()"><a [routerLink]="['/organize']">ORGANIZE</a></li>
+        <li (click)="toggleState()"><a [routerLink]="['/training']">TRAINING</a></li>
+        <li (click)="toggleState()"><a [routerLink]="['/stats']">STATISTICS</a></li>
       </ul>
     </div>
   </div>
