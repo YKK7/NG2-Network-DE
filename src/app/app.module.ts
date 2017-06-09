@@ -25,6 +25,7 @@ import { VolunteerSidebarComponent } from './volunteer-sidebar/volunteer-sidebar
 import{SidebarModule} from 'ng-sidebar';
 import { VolunteerFormComponent } from './volunteer-form/volunteer-form.component';
 import { VolunteerFeatureComponent } from './volunteer-feature/volunteer-feature.component';
+import { OrganizeFeatureComponent } from './organize-feature/organize-feature.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { VolunteerFeatureComponent } from './volunteer-feature/volunteer-feature
     HomeFooterComponent,
     VolunteerSidebarComponent,
     VolunteerFormComponent,
-    VolunteerFeatureComponent
+    VolunteerFeatureComponent,
+    OrganizeFeatureComponent
   ],
   imports: [
     BrowserModule,
