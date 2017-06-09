@@ -1,0 +1,38 @@
+<!--<div id="smssignup" class="container-fluid">-->
+  <div class="text-center">
+    <h2>SMS Sign Up</h2>
+    <h4>Interested in receiving SMS updates on upcoming events near you? Complete the form below!</h4>
+  </div>
+
+  <div class="text-left">
+    <form role="form" id="memberForm">
+      <div class="form-group">
+
+        <label for="first_name">Name</label>
+        <input type="text" class="form-control" id="first_name" name="first_name">
+
+
+        <label for="zipcode">Zipcode</label>
+        <input type="text" class="form-control" id="zipcode" name="zipcode">
+
+        <!--<fieldset>-->
+        <label for="mobile">Mobile</label>
+        <input type="text" class="form-control" id="mobile" name="phones[mobile]">
+
+        <!--</fieldset>-->
+        <p>Contact me about:</p>
+        <form class="form-inline">
+          <label class="mr-sm-2" for="inlineFormCustomSelect"></label>
+          <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+            <option selected>Choose...</option>
+            <option value="1">Upcoming Training Events</option>
+            <option value="2">Upcoming Volunteer Events</option>
+            <option value="3">Both Training and Volunteer Events</option>
+          </select>
+        </form>
+      </div>
+
+      <button id="memberButton" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
