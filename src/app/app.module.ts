@@ -21,6 +21,10 @@ import { LocationFormComponent } from './location-form/location-form.component';
 import { OrganizeSidebarComponent } from './organize-sidebar/organize-sidebar.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
+import { VolunteerSidebarComponent } from './volunteer-sidebar/volunteer-sidebar.component';
+import{SidebarModule} from 'ng-sidebar';
+import { VolunteerFormComponent } from './volunteer-form/volunteer-form.component';
+import { VolunteerFeatureComponent } from './volunteer-feature/volunteer-feature.component';
 
 @NgModule({
   declarations: [
@@ -39,14 +43,18 @@ import { HomeFooterComponent } from './home-footer/home-footer.component';
     LocationFormComponent,
     OrganizeSidebarComponent,
     JumbotronComponent,
-    HomeFooterComponent
+    HomeFooterComponent,
+    VolunteerSidebarComponent,
+    VolunteerFormComponent,
+    VolunteerFeatureComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true }),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCVX2yvf9wYcaQVJpG1YC8P__g0YVKnhNw'
-    })
+    }),
+    SidebarModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
