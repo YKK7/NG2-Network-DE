@@ -14,15 +14,17 @@
 .navbar li a,
 .navbar .navbar-brand {
   color: #ffe486 !important;
+  background-color:#588c9f;
 }
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
   color: #f4511e !important;
-  background-color: #fff !important;
+  background-color: #588c9f !important;
 }
 
 .navbar-default .navbar-toggle {
-  border-color: transparent;
-  color: #fff !important;
+  border-color: #588c9f;
+  color: #588c9f !important;
 }
+
