@@ -1,3 +1,17 @@
-<sebm-google-map [latitude]="lat" [longitude]="lng">
-  <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-</sebm-google-map>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    
+
+
+  <map [latitude]="lat" [longitude]="lng">
+  <map-marker [latitude]="lat" [longitude]="lng"></map-marker>
+</map>
+
+      
+<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+<!-- Replace the value of the key parameter with your own API key. -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFiwwFBmZShYGndwVY8DV6x1Z9Jc8ZhHI&libraries=places&callback=initAutocomplete"></script>
+
+
+
+         

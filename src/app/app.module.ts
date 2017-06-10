@@ -58,7 +58,7 @@ import { EventsSmsComponent } from './events-sms/events-sms.component';
     BrowserModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true }),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCVX2yvf9wYcaQVJpG1YC8P__g0YVKnhNw'
+      apiKey: 'AIzaSyAFiwwFBmZShYGndwVY8DV6x1Z9Jc8ZhHI'
     }),
     SidebarModule.forRoot(),
   ],
