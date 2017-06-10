@@ -15,7 +15,7 @@ constructor() { }
   ngOnInit() {
         const map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 39.7391, lng: -75.5398},
-          zoom: 12,
+          zoom: 10,
           mapTypeId: 'roadmap'
         });
 
@@ -78,10 +78,15 @@ constructor() { }
           map.fitBounds(bounds);
         });
 
-    this.setMarkers(map);
+    this.setAnimalMarkers(map);
+    this.setArtMarkers(map);
+    this.setMentorMarkers(map);
+    this.setElderlyMarkers(map);
+    this.setCommunityMarkers(map);
   }
 
-  private setMarkers(map: google.maps.Map) {
+
+  private setAnimalMarkers(map: google.maps.Map) {
     const animals = [
       ['Faithful Friends Animal Society', 39.729884, -75.579206, 4],
       ['Reasonable Rescue', 39.714426, -75.665008, 5],
@@ -89,8 +94,8 @@ constructor() { }
       ];
 
     const image = {
-      icon: 'blue',
-      size: new google.maps.Size(20, 32),
+      url: 'http://people.wm.edu/~mxblum/icons/zoo.png',
+      size: new google.maps.Size(30, 40),
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(0, 32)
     };
@@ -109,6 +114,124 @@ constructor() { }
         shape: shape,
         title: animal[0],
         zIndex: animal[3]
+      });
+    }
+  }
+
+  private setArtMarkers(map: google.maps.Map) {
+    const arts = [
+      ['Delaware Children\'s Theater' , 39.751702, -75.556188, 2],
+    ];
+
+    const image = {
+      url: 'http://people.wm.edu/~mxblum/icons/museum.png',
+      size: new google.maps.Size(30, 40),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0, 32)
+    };
+
+    const shape = {
+      coords: [1, 1, 1, 20, 18, 20, 18, 1],
+      type: 'poly'
+    };
+
+    for (let i = 0; i < arts.length; i++) {
+      const art = arts[i];
+      const marker = new google.maps.Marker({
+        position: {lat: art[1], lng: art[2]},
+        map: map,
+        icon: image,
+        shape: shape,
+        title: art[0],
+        zIndex: art[3]
+      });
+    }
+  }
+
+  private setMentorMarkers(map: google.maps.Map) {
+    const mentors = [
+      ['Delaware Mentoring Community', 39.745728, -75.548835, 3]
+    ];
+
+    const image = {
+      url: 'http://people.wm.edu/~mxblum/icons/school.png',
+      size: new google.maps.Size(30, 40),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0, 32)
+    };
+
+    const shape = {
+      coords: [1, 1, 1, 20, 18, 20, 18, 1],
+      type: 'poly'
+    };
+
+    for (let i = 0; i < mentors.length; i++) {
+      const mentor = mentors[i];
+      const marker = new google.maps.Marker({
+        position: {lat: mentor[1], lng: mentor[2]},
+        map: map,
+        icon: image,
+        shape: shape,
+        title: mentor[0],
+        zIndex: mentor[3]
+      });
+    }
+  }
+  private setElderlyMarkers(map: google.maps.Map) {
+    const elderly = [
+      ['Brandywine Senior Center', 39.802441, -75.465547, 2],
+     ];
+
+    const image = {
+      url: 'http://people.wm.edu/~mxblum/icons/icons/girlfriend.png',
+      size: new google.maps.Size(30, 40),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0, 32)
+    };
+
+    const shape = {
+      coords: [1, 1, 1, 20, 18, 20, 18, 1],
+      type: 'poly'
+    };
+
+    for (let i = 0; i < elderly.length; i++) {
+      const elder = elderly[i];
+      const marker = new google.maps.Marker({
+        position: {lat: elder[1], lng: elder[2]},
+        map: map,
+        icon: image,
+        shape: shape,
+        title: elder[0],
+        zIndex: elder[3]
+      });
+    }
+  }
+  private setCommunityMarkers(map: google.maps.Map) {
+    const communities = [
+      ['United Way of Delaware', 39.743089, -75.551465, 2],
+    ];
+
+    const image = {
+      url: 'http://people.wm.edu/~mxblum/icons/icons/hostel.png',
+      size: new google.maps.Size(30, 40),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0, 32)
+    };
+
+    const shape = {
+      coords: [1, 1, 1, 20, 18, 20, 18, 1],
+      type: 'poly'
+    };
+
+    for (let i = 0; i < communities.length; i++) {
+      const community = communities[i];
+      const marker = new google.maps.Marker({
+        position: {lat: community[1], lng: community[2]},
+        map: map,
+        icon: image,
+        shape: shape,
+        title: community[0],
+        zIndex: community[3]
       });
     }
   }
