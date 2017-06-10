@@ -14,7 +14,7 @@ constructor() { }
 
   ngOnInit() {
         const map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -33.9, lng: 151.2},
+          center: {lat: 39.7391, lng: -75.5398},
           zoom: 13,
           mapTypeId: 'roadmap'
         });
