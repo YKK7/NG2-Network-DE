@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './app.routes';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from "@angular/forms";
+import{} from '@types/googlemaps';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -58,9 +61,12 @@ import { EventsSmsComponent } from './events-sms/events-sms.component';
     BrowserModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true }),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAFiwwFBmZShYGndwVY8DV6x1Z9Jc8ZhHI'
+      apiKey: 'AIzaSyAFiwwFBmZShYGndwVY8DV6x1Z9Jc8ZhHI',
+      libraries:["places"]
     }),
     SidebarModule.forRoot(),
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
