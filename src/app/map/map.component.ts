@@ -1,6 +1,7 @@
 import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MapsAPILoader } from 'angular2-google-maps/core';
+import {} from '@types/googlemaps';
 
 declare var google: any;
 

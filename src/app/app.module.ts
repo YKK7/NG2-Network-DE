@@ -5,9 +5,7 @@ import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './app.routes';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from "@angular/forms";
 import {GoogleMapsNg2Module} from 'google-maps-ng2';
-import{} from '@types/googlemaps';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
