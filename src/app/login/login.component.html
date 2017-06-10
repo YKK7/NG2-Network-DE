@@ -1,0 +1,15 @@
+<div class="text-left">
+  <form role="form" id="memberForm" #form="ngForm"  (ngSubmit)="onSubmit(form)">
+    <div class="form-group" >
+
+      <label for="email">Email Address:</label>
+      <input type="email" class="form-control" id="email" name="email"  ngModel required #email="ngModel">
+
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" name="password"  ngModel required #password="ngModel">
+    </div>
+    <br>
+    <button id="memberButton" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <p class="error" ng-show="error">{{errorMessage}}</p>
+</div>
