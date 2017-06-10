@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
           form.value.password)
         .then(_ => this.routeToOrginizePage())
         .catch( (error) => {
-          if (error['code'] === 'auth/email-already-in-use') {
+          if (error['code'] === 'auth/user-not-found') {
             this.createNewUser(form.value.email,
               form.value.password);
           }
