@@ -1,7 +1,15 @@
  #map {
         height: 60vh;
         width: 70vw;
+        margin: 0 auto 0 auto;
       }
+ p{
+   color: white;
+   background-color: #588c9f;
+   font-size: 40px !important;
+   align-items: center;
+   font-family: Montserrat, sans-serif;
+ }
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 500px;
@@ -79,4 +87,3 @@
         width: 345px;
       }
 
-      
