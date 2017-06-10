@@ -13,15 +13,15 @@ export class MapComponent implements OnInit {
 constructor() { }
 
   ngOnInit() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 39.7391, lng: -75.5398},
+        const map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -33.9, lng: 151.2},
           zoom: 13,
           mapTypeId: 'roadmap'
         });
 
         // Create the search box and link it to the UI element.
-        var input = document.getElementById('pac-input');
-        var searchBox = new google.maps.places.SearchBox(input);
+        const input = document.getElementById('pac-input');
+        const searchBox = new google.maps.places.SearchBox(input);
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
         // Bias the SearchBox results towards current map's viewport.
@@ -29,11 +29,11 @@ constructor() { }
           searchBox.setBounds(map.getBounds());
         });
 
-        var markers = [];
+        let markers = [];
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
         searchBox.addListener('places_changed', function() {
-          var places = searchBox.getPlaces();
+          const places = searchBox.getPlaces();
 
           if (places.length == 0) {
             return;
@@ -46,13 +46,13 @@ constructor() { }
           markers = [];
 
           // For each place, get the icon, name and location.
-          var bounds = new google.maps.LatLngBounds();
+          const bounds = new google.maps.LatLngBounds();
           places.forEach(function(place) {
             if (!place.geometry) {
-              console.log("Returned place contains no geometry");
+              console.log('Returned place contains no geometry');
               return;
             }
-            var icon = {
+            const icon = {
               url: place.icon,
               size: new google.maps.Size(71, 71),
               origin: new google.maps.Point(0, 0),
@@ -77,6 +77,42 @@ constructor() { }
           });
           map.fitBounds(bounds);
         });
-      }
+
+    this.setMarkers(map);
+  }
+
+  private setMarkers(map: google.maps.Map) {
+    const beaches = [
+      ['Bondi Beach', -33.890542, 151.274856, 4],
+      ['Coogee Beach', -33.923036, 151.259052, 5],
+      ['Cronulla Beach', -34.028249, 151.157507, 3],
+      ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+      ['Maroubra Beach', -33.950198, 151.259302, 1]
+    ];
+
+    const image = {
+      url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+      size: new google.maps.Size(20, 32),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0, 32)
+    };
+
+    const shape = {
+      coords: [1, 1, 1, 20, 18, 20, 18, 1],
+      type: 'poly'
+    };
+
+    for (var i = 0; i < beaches.length; i++) {
+      const beach = beaches[i];
+      const marker = new google.maps.Marker({
+        position: {lat: beach[1], lng: beach[2]},
+        map: map,
+        icon: image,
+        shape: shape,
+        title: beach[0],
+        zIndex: beach[3]
+      });
+    }
+  }
 }
 
