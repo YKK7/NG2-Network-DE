@@ -1,6 +1,9 @@
 
+
 <div class="container">
-      <div class="form-group">
+
+    <div class="form-group">
+        <p> Enter location and click on suggestion that you want</p>
         <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
       </div>
       <sebm-google-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
@@ -8,4 +11,3 @@
       </sebm-google-map>
     </div>
 
-         
