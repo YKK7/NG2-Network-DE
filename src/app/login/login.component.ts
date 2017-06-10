@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
       this.angularFireAuth.auth
         .signInWithEmailAndPassword(form.value.email,
           form.value.password)
-        .then(_ => this.outeToOrginizePage())
+        .then(_ => this.routeToOrginizePage())
         .catch( (error) => {
           if (error['code'] === 'auth/email-already-in-use') {
             this.createNewUser(form.value.email,
@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  // don't create user here automatically, it has to be created with user profile info as well.
   private createNewUser(email, password: string) {
     this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password)
       .catch (function (error){
@@ -40,7 +41,7 @@ export class LoginComponent implements OnInit {
       })
   }
 
-  private outeToOrginizePage() {
+  private routeToOrginizePage() {
     this.location.back();
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import {AngularFireAuth} from 'angularfire2/auth';
 
 @Component({
   selector: 'app-create-profile',
@@ -8,7 +9,7 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 })
 export class CreateProfileComponent implements OnInit {
   profile: FirebaseListObservable<any[]>;
-  constructor(private db: AngularFireDatabase) {
+  constructor(private db: AngularFireDatabase, private angularFireAuth: AngularFireAuth) {
     this.profile = db.list('profile');
   }
   ngOnInit() {
@@ -20,6 +21,7 @@ export class CreateProfileComponent implements OnInit {
   }
   private createProfile(form) {
     console.log('adding data');
+    this.angularFireAuth.auth.createUserWithEmailAndPassword(form.value.email, form.value.password)
     this.profile.push({firstName: form.value.firstName,
       lastName: form.value.lastName,
       phoneNumber: form.value.phoneNumber,
@@ -28,7 +30,7 @@ export class CreateProfileComponent implements OnInit {
       state: form.value.state,
       zipcode: form.value.zipcode,
       email: form.value.email,
-      password: form.value.password})
+      })
       .then(_ => console.log('add successful'))
       .catch(err => console.log(err, 'Add failure'));
   }
