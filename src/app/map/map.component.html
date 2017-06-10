@@ -1,13 +1,8 @@
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map"></div>
 
-
-<div class="container">
-
-    <div class="form-group">
-        <p> Enter location and click on suggestion that you want</p>
-        <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
-      </div>
-      <sebm-google-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
-        <sebm-google-map-marker [latitude]="latitude" [longitude]="longitude"></sebm-google-map-marker>
-      </sebm-google-map>
-    </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS9UDB8cqF_f4gE7-328G-l43XGEYV8RA&libraries=places&callback=initAutocomplete"
+         async defer></script>
 
