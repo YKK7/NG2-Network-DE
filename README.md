@@ -1,3 +1,20 @@
+## custom libraries
+npm install angularfire2 firebase --save
+
+npm install google-maps-ng2 --save
+
+npm install @types/googlemaps 
+(if the above failed tried to update npm using npm i -g npm )
+
+npm install ng-daterangepicker --save
+
+
+
+
+
+
+
+
 # MyNewProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
@@ -26,3 +43,4 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+

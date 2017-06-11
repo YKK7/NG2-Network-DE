@@ -5,6 +5,7 @@ import {AngularFireAuth, AngularFireAuthProvider, AngularFireAuthModule} from 'a
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import {NgForm} from '@angular/forms';
 import {User} from 'firebase/app';
+import { NgDateRangePickerOptions } from 'ng-daterangepicker';
 
 
 @Component({
@@ -17,6 +18,8 @@ export class OrganizeComponent implements OnInit {
   events: FirebaseListObservable<any[]>;
   isLoggedIn: boolean;
   currentUser: User;
+  value: string;
+  options: NgDateRangePickerOptions;
 
   constructor(private angularFireAuth: AngularFireAuth, private router: Router, private db: AngularFireDatabase) {
     this.events = db.list('events');
@@ -29,6 +32,15 @@ export class OrganizeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.options = {
+      theme: 'default',
+      range: 'tm',
+      dayNames: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      presetNames: ['This Month', 'Last Month', 'This Week', 'Last Week', 'This Year', 'Last Year', 'Start', 'End'],
+      dateFormat: 'yMd',
+      outputFormat: 'DD/MM/YYYY',
+      startOfWeek: 1
+    };
   }
 
   onSubmit(form) {
