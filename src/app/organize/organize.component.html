@@ -1,8 +1,9 @@
-<app-organize-sidebar></app-organize-sidebar>
-<app-organize-feature></app-organize-feature>
 
 <span *ngIf="!isLoggedIn">
  <!--<app-login-signup></app-login-signup>-->
+ <app-organize-sidebar></app-organize-sidebar>
+<app-organize-feature></app-organize-feature>
+
   <br>
 <div class="jumbotron text-center">  
 <h3> Login Or Sign Up To Get Started</h3>
@@ -33,13 +34,16 @@
 <span *ngIf="isLoggedIn">
   <div class="container">
    <div class="row">
+     <br>
         <div class="col-11">
        </div>
-      <div class="col-1">
+      <div class="col-0">
           <app-log-out></app-log-out>
       </div>
    </div>
     </div>
+    <app-organize-sidebar></app-organize-sidebar>
+<app-organize-feature></app-organize-feature>
 <div id="services" class="container-fluid text-center">
   <div id="Donate" class="container-fluid">
     <div class="text-center">
