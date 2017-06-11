@@ -71,7 +71,14 @@
           <br>
            <ng-daterangepicker [(ngModel)]="value" [ngModelOptions]="{standalone: true}" [options]="options"
                                id="dateRangePicker"></ng-daterangepicker>
-           <br>
+          
+          <!--TODO: connect dateRangePicker to timePickers-->
+           <div class="row">
+             <div class="col-md-3"><timepicker [(ngModel)]="startTime" [ngModelOptions]="{standalone: true}" [minuteStep]="mstep"></timepicker></div>
+             <div class="col-md-3"><timepicker [(ngModel)]="endTime" [ngModelOptions]="{standalone: true}" [minuteStep]="mstep"></timepicker></div>
+           </div>
+           <!--<pre class="alert alert-info">Selected start date is: {{value}} Start Time is: {{startTime}}</pre>-->
+
           <label for="companyURL">Company URL</label>
           <input type="url" class="form-control" id="companyURL" name="companyURL">
 

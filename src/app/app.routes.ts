@@ -9,6 +9,7 @@ import { OrganizeComponent } from './organize/organize.component';
 import { EventsNewCalenderComponent } from './events-new-calender/events-new-calender.component';
 import {LoginComponent} from './login/login.component';
 import {CreateProfileComponent} from './create-profile/create-profile.component';
+import {CreateProfileSuccessComponent} from "./create-profile-success/create-profile-success.component";
 
 
 export const rootRouterConfig: Routes = [
@@ -22,5 +23,6 @@ export const rootRouterConfig: Routes = [
     { path: 'events', component: EventsNewCalenderComponent },
     { path: 'organize', component: OrganizeComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'createProfile', component: CreateProfileComponent }
+    { path: 'createProfile', component: CreateProfileComponent },
+    { path: 'createProfileSuccess', component: CreateProfileSuccessComponent }
     ];

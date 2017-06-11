@@ -8,6 +8,8 @@ npm install @types/googlemaps
 
 npm install ng-daterangepicker --save
 
+npm install ngx-bootstrap --save
+
 
 
 
