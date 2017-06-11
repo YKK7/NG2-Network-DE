@@ -39,6 +39,9 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { LogOutComponent } from './log-out/log-out.component';
 import { CreateProfileComponent } from './create-profile/create-profile.component';
+import { EventsNewCalenderComponent } from './events-new-calender/events-new-calender.component';
+import { NgDateRangePickerModule } from 'ng-daterangepicker';
+import { LoginSignupComponent } from './login-signup/login-signup.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyClaQQH76XoSggCc2LoaG9vxtqhIY-OYOE',
@@ -75,14 +78,16 @@ export const firebaseConfig = {
     EventsSmsComponent,
     LoginComponent,
     LogOutComponent,
-    CreateProfileComponent
+    CreateProfileComponent,
+    EventsNewCalenderComponent,
+    LoginSignupComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: true }),
     GoogleMapsNg2Module.forRoot({
       apiKey: 'AIzaSyBS9UDB8cqF_f4gE7-328G-l43XGEYV8RA',
-      libraries:["places"]
+      libraries: ['places']
     }),
     SidebarModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
@@ -91,6 +96,7 @@ export const firebaseConfig = {
     FormsModule,
     ReactiveFormsModule,
     FormsModule,
+    NgDateRangePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
