@@ -30,6 +30,9 @@ h4 {
   padding: 100px 25px;
   font-family: Montserrat, sans-serif;
 }
+.jumbotron p{
+  font-size: 14px;
+}
 
 .container-fluid {
   padding: 40px 20px 40px 20px;
