@@ -261,6 +261,18 @@ constructor() { }
     const elderly = [
       ['Brandywine Senior Center', 39.802441, -75.465547, 2],
      ];
+     var infoWindowContent = [
+        ['<div class= "info content">' +
+        '<h3> Brandywine Senior Center</h3>'+ 
+        '<p> Be an Excercise Class Companion:<br> Help assist in an exercise class.  Be a small-group instructor<p>'+
+        '<p><b>Date:</b>Saturday, July 8, 2017 </p>'+
+        '<p><b>Time:</b>10:00AM-1:00PM</p>'+
+        '<p><b>Contact:</b><a href="mailto:instructBrandywine@email.com">Rose Dewitt</a></p>'+
+        '<p><b>Address:</b>3301 Green St, Claymont, DE 19703</p>'+
+        '<p><a href= "https://goo.gl/maps/Mbf41gcJ8Ht">Get Directions</a></p>'+
+        '</div>']
+      ];
+      var infoWindow= new google.maps.InfoWindow(), marker, i;
 
     const image = {
       url: 'http://people.wm.edu/~mxblum/icons/icons/girlfriend.png',
@@ -284,12 +296,31 @@ constructor() { }
         title: elder[0],
         zIndex: elder[3]
       });
+      google.maps.event.addListener(marker, 'click', (function(marker, i){
+        return function(){
+          infoWindow.setContent(infoWindowContent[i][0]);
+          infoWindow.open(map, marker);
+        }
+      })(marker, i))
     }
   }
   private setCommunityMarkers(map: google.maps.Map) {
     const communities = [
-      ['United Way of Delaware', 39.743089, -75.551465, 2],
+      ['Canby Park Clean Up', 39.734766, -75.581881, 2],
     ];
+  var infoWindowContent = [
+        ['<div class= "info content">' +
+        '<h3> Canby Park Clean Up</h3>'+ 
+        '<p> Help us clean up a local park!<p>'+
+        '<p><b>Date:</b>Monday, June 12, 2017 </p>'+
+        '<p><b>Time:</b>8:30AM-9:30AM</p>'+
+        '<p><b>Contact:</b> Just show up!</p>'+
+        '<p><b>Address:</b> 1706 Oak St, Wilmington, DE 19805</p>'+
+        '<p><a href= "https://goo.gl/maps/q6mXG3di4oz">Get Directions</a></p>'+
+        '</div>']
+      ];
+      var infoWindow= new google.maps.InfoWindow(), marker, i;
+    
 
     const image = {
       url: 'http://people.wm.edu/~mxblum/icons/icons/hostel.png',
@@ -313,7 +344,14 @@ constructor() { }
         title: community[0],
         zIndex: community[3]
       });
+        google.maps.event.addListener(marker, 'click', (function(marker, i){
+        return function(){
+          infoWindow.setContent(infoWindowContent[i][0]);
+          infoWindow.open(map, marker);
+        }
+      })(marker, i))
     }
-  }
+    }
 }
+
 
