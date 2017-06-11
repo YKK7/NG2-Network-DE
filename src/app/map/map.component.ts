@@ -16,7 +16,7 @@ constructor() { }
   ngOnInit() {
         const map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 39.7391, lng: -75.5398},
-          zoom: 10,
+          zoom: 9,
           mapTypeId: 'roadmap'
         });
 
@@ -27,7 +27,7 @@ constructor() { }
 
         // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function() {
-          searchBox.setBounds(map.getBounds());
+          searchBox.setBounds(map.getBounds())
         });
 
         let markers = [];
@@ -71,7 +71,8 @@ constructor() { }
 
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
-              bounds.union(place.geometry.viewport);
+              bounds.union(place.geometry.viewport)
+      
             } else {
               bounds.extend(place.geometry.location);
             }
@@ -166,6 +167,19 @@ constructor() { }
       ['Delaware Children\'s Theater' , 39.751702, -75.556188, 2],
     ];
 
+    var infoWindowContent = [
+        ['<div class= "info content">' +
+        '<h3> Delaware Children\'s Theater</h3>'+ 
+        '<p> Costume Drive for Upcoming Performance of Aladdin Jr.  Donations Welcome!<p>'+
+        '<p><b>Date:</b>Saturday, July 1st, 2017 </p>'+
+        '<p><b>Time:</b>10:00AM-6:00PM</p>'+
+        '<p><b>Contact:</b>Just show up!</p>'+
+        '<p><b>Address:</b> 1014 Delaware Ave, Wilmington, DE 19806</p>'+
+        '<p><a href= "https://goo.gl/maps/nDct5Hyh9QR2">Get Directions</a></p>'+
+        '</div>']
+      ];
+      var infoWindow= new google.maps.InfoWindow(), marker, i;
+
     const image = {
       url: 'http://people.wm.edu/~mxblum/icons/museum.png',
       size: new google.maps.Size(30, 40),
@@ -188,6 +202,12 @@ constructor() { }
         title: art[0],
         zIndex: art[3]
       });
+      google.maps.event.addListener(marker, 'click', (function(marker, i){
+        return function(){
+          infoWindow.setContent(infoWindowContent[i][0]);
+          infoWindow.open(map, marker);
+        }
+      })(marker, i))
     }
   }
 
@@ -195,7 +215,18 @@ constructor() { }
     const mentors = [
       ['Delaware Mentoring Community', 39.745728, -75.548835, 3]
     ];
-
+    var infoWindowContent = [
+        ['<div class= "info content">' +
+        '<h3> Delaware Mentoring Community</h3>'+ 
+        '<p> Become A Mentor Information Meeting:<br>  Attend this information session to learn about mentoring opportunities near you! Open to public.  Contact with questions.<p>'+
+        '<p><b>Date:</b>Thursday, June 29, 2017 </p>'+
+        '<p><b>Time:</b>6:00PM-8:00PM</p>'+
+        '<p><b>Contact:</b><a href="mailto:helpmentorde@email.com">Pete Passwater</a></p>'+
+        '<p><b>Address:</b>100 W 10th Street Wilmington, DE 19801</p>'+
+        '<p><a href= "https://goo.gl/maps/PYra5t18GVG2">Get Directions</a></p>'+
+        '</div>']
+      ];
+      var infoWindow= new google.maps.InfoWindow(), marker, i;
     const image = {
       url: 'http://people.wm.edu/~mxblum/icons/school.png',
       size: new google.maps.Size(30, 40),
@@ -218,6 +249,12 @@ constructor() { }
         title: mentor[0],
         zIndex: mentor[3]
       });
+      google.maps.event.addListener(marker, 'click', (function(marker, i){
+        return function(){
+          infoWindow.setContent(infoWindowContent[i][0]);
+          infoWindow.open(map, marker);
+        }
+      })(marker, i))
     }
   }
   private setElderlyMarkers(map: google.maps.Map) {
