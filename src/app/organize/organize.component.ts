@@ -20,6 +20,8 @@ export class OrganizeComponent implements OnInit {
   currentUser: User;
   value: string;
   options: NgDateRangePickerOptions;
+
+  //Time picker fields
   startTime: Date;
   endTime: Date;
   mstep: number = 15;
@@ -45,6 +47,8 @@ export class OrganizeComponent implements OnInit {
       outputFormat: 'MM/DD/YYYY',
       startOfWeek: 1
     };
+
+    //initializes time pickers to 8:00AM
     let d = new Date();
     d.setHours(8);
     d.setMinutes(0);
