@@ -20,7 +20,7 @@ h4 {
 .jumbotron {
   background-color: #588c9f;
   color: #f2f2f2;
-  padding: 0px 0px 50px;
+  padding: 0px 0px 60px;
   font-family: Montserrat, sans-serif;
 }
 .container-fluid {
@@ -170,14 +170,14 @@ footer .glyphicon {
   border: none;
   color:#FFFFFF;
   font-style: bold;
-  width: 50%;
+  width: 46vw;
 }
 .yellowacct{
   background-color: #FEB733;
   border: none;
   color:#FFFFFF;
   font-style: bold;
-  width: 45%;
+  width: 46.2vw;
 }
 @keyframes slide {
   0% {
