@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import {AngularFireAuth} from 'angularfire2/auth';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-create-profile',
@@ -10,7 +11,7 @@ import {AngularFireAuth} from 'angularfire2/auth';
 export class CreateProfileComponent implements OnInit {
   errorMessage: string;
 
-  constructor(private db: AngularFireDatabase, private angularFireAuth: AngularFireAuth) {
+  constructor(private db: AngularFireDatabase, private angularFireAuth: AngularFireAuth, private router: Router) {
    }
   ngOnInit() {
   }
@@ -36,7 +37,11 @@ export class CreateProfileComponent implements OnInit {
       zipcode: form.value.zipcode,
       email: form.value.email
     })
-      .then(_ => this.errorMessage = 'Profile Added successfully ')
+      .then(_ => {
+        this.errorMessage = 'Profile Added successfully '
+        this.router.navigate(['/createProfileSuccess']);
+
+      })
       .catch(error =>  this.errorMessage = error['message']);
   }
 }

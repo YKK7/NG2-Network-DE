@@ -21,6 +21,12 @@ export class OrganizeComponent implements OnInit {
   value: string;
   options: NgDateRangePickerOptions;
 
+  //Time picker fields
+  startTime: Date;
+  endTime: Date;
+  mstep: number = 15;
+
+
   constructor(private angularFireAuth: AngularFireAuth, private router: Router, private db: AngularFireDatabase) {
     this.events = db.list('events');
     this.currentUser =  this.angularFireAuth.auth.currentUser
@@ -38,9 +44,16 @@ export class OrganizeComponent implements OnInit {
       dayNames: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       presetNames: ['This Month', 'Last Month', 'This Week', 'Last Week', 'This Year', 'Last Year', 'Start', 'End'],
       dateFormat: 'yMd',
-      outputFormat: 'DD/MM/YYYY',
+      outputFormat: 'MM/DD/YYYY',
       startOfWeek: 1
     };
+
+    //initializes time pickers to 8:00AM
+    let d = new Date();
+    d.setHours(8);
+    d.setMinutes(0);
+    this.startTime = d;
+    this.endTime = d;
   }
 
   onSubmit(form) {
