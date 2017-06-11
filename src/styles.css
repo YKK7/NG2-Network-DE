@@ -43,7 +43,7 @@ h4 {
 }
 
 .logo-small {
-  color: #f4511e;
+  color: #588c9f;
   font-size: 50px;
 }
 
@@ -72,11 +72,11 @@ h4 {
 }
 
 .carousel-indicators li {
-  border-color: #f4511e;
+  border-color: #588c9f;
 }
 
 .carousel-indicators li.active {
-  background-color: #f4511e;
+  background-color: #588c9f;
 }
 
 .item h4 {
@@ -202,6 +202,17 @@ footer .glyphicon {
   animation-duration: 1s;
   -webkit-animation-duration: 1s;
   visibility: visible;
+}
+.blue{
+  border: none;
+  background-color:#568CA0;
+  color: #FFFFFF;
+  
+}
+.yellow{
+  background-color: #FEB733;
+  border: none;
+  color:#568CA0;
 }
 
 @keyframes slide {

@@ -18,9 +18,9 @@ h4 {
   margin-bottom: 30px;
 }
 .jumbotron {
-  background-color: #f4511e;
-  color: #fff;
-  padding: 100px 25px;
+  background-color: #588c9f;
+  color: #f2f2f2;
+  padding: 0px 0px 50px;
   font-family: Montserrat, sans-serif;
 }
 .container-fluid {
@@ -164,6 +164,20 @@ footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
   color: #f4511e;
+}
+.yellow{
+  background-color: #FEB733;
+  border: none;
+  color:#FFFFFF;
+  font-style: bold;
+  width: 50%;
+}
+.yellowacct{
+  background-color: #FEB733;
+  border: none;
+  color:#FFFFFF;
+  font-style: bold;
+  width: 45%;
 }
 @keyframes slide {
   0% {
