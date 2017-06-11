@@ -42,6 +42,8 @@ import { CreateProfileComponent } from './create-profile/create-profile.componen
 import { EventsNewCalenderComponent } from './events-new-calender/events-new-calender.component';
 import { NgDateRangePickerModule } from 'ng-daterangepicker';
 import { LoginSignupComponent } from './login-signup/login-signup.component';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
+
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyClaQQH76XoSggCc2LoaG9vxtqhIY-OYOE',
@@ -96,7 +98,8 @@ export const firebaseConfig = {
     FormsModule,
     ReactiveFormsModule,
     FormsModule,
-    NgDateRangePickerModule
+    NgDateRangePickerModule,
+    TimepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
