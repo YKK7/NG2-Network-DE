@@ -4,21 +4,26 @@
 <span *ngIf="!isLoggedIn">
  <!--<app-login-signup></app-login-signup>-->
   <br>
-  <br>
-<div class="row">
-  <div class="col-md-3">
-  </div>
+<div class="jumbotron text-center">  
+<h3> Login Or Sign Up To Get Started</h3>
+<br>
+  <!--<div class="col-md-3">
+  </div>-->
   <div class="container" bo>
-    <div class="col-md-3" style="padding-left: 0px;  padding-right: 0px;">
+    
         <button type="button" routerLink="/login" routerLinkActive="active"
-                class="btn btn-primary btn-lg">Log In</button>
+                class="btn  btn-primary btn-lg yellow">Log In</button>
+    
+    <br>
+
+  
+    <div class = "row">
+      <br>
     </div>
-    <div class="col-md-3" style="padding-left: 0px;  padding-right: 0px;">
-  <button type="button" routerLink="/createProfile" routerLinkActive="active" class="btn btn-primary btn-lg">Create New Profile</button>
+  <button type="button" routerLink="/createProfile" routerLinkActive="active" class="btn btn-primary btn-lg yellowacct">Create New Profile</button>
     </div>
-    <div class="col-md-3">
-    </div>
-  </div>
+   
+   
 </div>
 
   <div class="container">
@@ -74,7 +79,7 @@
           <input type="textarea" class="form-control" id="eventDetails" name="eventDetails">
         </div>
         <br>
-        <button id="memberButton" type="submit" class="btn btn-primary">Submit</button>
+        <button id="memberButton" type="submit" class="btn btn-primary blue">Submit</button>
       </form>
     </div>
   </div>
