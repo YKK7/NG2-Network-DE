@@ -24,21 +24,9 @@ export class LoginComponent implements OnInit {
           form.value.password)
         .then(_ => this.routeToOrginizePage())
         .catch( (error) => {
-          if (error['code'] === 'auth/user-not-found') {
-            this.createNewUser(form.value.email,
-              form.value.password);
-          }
+          this.errorMessage =  error['message'];
       })
     }
-  }
-
-  // don't create user here automatically, it has to be created with user profile info as well.
-  private createNewUser(email, password: string) {
-    this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password)
-      .catch (function (error){
-        this.errorMessage = error['message'];
-        console.log(error);
-      })
   }
 
   private routeToOrginizePage() {

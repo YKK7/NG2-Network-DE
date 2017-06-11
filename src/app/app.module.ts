@@ -41,17 +41,15 @@ import { LogOutComponent } from './log-out/log-out.component';
 import { CreateProfileComponent } from './create-profile/create-profile.component';
 import { EventsNewCalenderComponent } from './events-new-calender/events-new-calender.component';
 import { NgDateRangePickerModule } from 'ng-daterangepicker';
-import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 
-
 export const firebaseConfig = {
-  apiKey: 'AIzaSyClaQQH76XoSggCc2LoaG9vxtqhIY-OYOE',
-  authDomain: 'first-test-8b104.firebaseapp.com',
-  databaseURL: 'https://first-test-8b104.firebaseio.com',
-  projectId: 'first-test-8b104',
-  storageBucket: 'first-test-8b104.appspot.com',
-  messagingSenderId: '897656003008'
+    apiKey: "AIzaSyCfR4PYhfL3UJ7BSK4uMhE3v1GawI4P4FA",
+    authDomain: "network-de.firebaseapp.com",
+    databaseURL: "https://network-de.firebaseio.com",
+    projectId: "network-de",
+    storageBucket: "network-de.appspot.com",
+    messagingSenderId: "329858263574"
 };
 
 @NgModule({
@@ -81,8 +79,7 @@ export const firebaseConfig = {
     LoginComponent,
     LogOutComponent,
     CreateProfileComponent,
-    EventsNewCalenderComponent,
-    LoginSignupComponent
+    EventsNewCalenderComponent
   ],
   imports: [
     BrowserModule,
