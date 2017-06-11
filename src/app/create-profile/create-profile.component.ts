@@ -37,7 +37,7 @@ export class CreateProfileComponent implements OnInit {
       email: form.value.email
     })
       .then(_ => this.errorMessage = 'Profile Added successfully ')
-      .catch(err =>  console.log(err, 'Add failure'));
+      .catch(error =>  this.errorMessage = error['message']);
   }
 }
 
