@@ -41,7 +41,6 @@ import { LogOutComponent } from './log-out/log-out.component';
 import { CreateProfileComponent } from './create-profile/create-profile.component';
 import { EventsNewCalenderComponent } from './events-new-calender/events-new-calender.component';
 import { NgDateRangePickerModule } from 'ng-daterangepicker';
-import { LoginSignupComponent } from './login-signup/login-signup.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyClaQQH76XoSggCc2LoaG9vxtqhIY-OYOE',
@@ -79,8 +78,7 @@ export const firebaseConfig = {
     LoginComponent,
     LogOutComponent,
     CreateProfileComponent,
-    EventsNewCalenderComponent,
-    LoginSignupComponent
+    EventsNewCalenderComponent
   ],
   imports: [
     BrowserModule,

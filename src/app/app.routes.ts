@@ -6,7 +6,6 @@ import { DonateComponent } from './donate/donate.component';
 import { TrainingComponent } from './training/training.component';
 import { StatsComponent } from './stats/stats.component';
 import { OrganizeComponent } from './organize/organize.component';
-import { EventsComponent } from './events/events.component';
 import { EventsNewCalenderComponent } from './events-new-calender/events-new-calender.component';
 import {LoginComponent} from './login/login.component';
 import {CreateProfileComponent} from './create-profile/create-profile.component';
@@ -21,7 +20,6 @@ export const rootRouterConfig: Routes = [
     { path: 'training', component: TrainingComponent },
     { path: 'stats', component: StatsComponent },
     { path: 'events', component: EventsNewCalenderComponent },
-    //  { path: 'events', component: EventsComponent },
     { path: 'organize', component: OrganizeComponent },
     { path: 'login', component: LoginComponent },
     { path: 'createProfile', component: CreateProfileComponent }
