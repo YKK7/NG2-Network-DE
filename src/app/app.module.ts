@@ -46,12 +46,12 @@ import { CreateProfileSuccessComponent } from './create-profile-success/create-p
 
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyClaQQH76XoSggCc2LoaG9vxtqhIY-OYOE',
-  authDomain: 'first-test-8b104.firebaseapp.com',
-  databaseURL: 'https://first-test-8b104.firebaseio.com',
-  projectId: 'first-test-8b104',
-  storageBucket: 'first-test-8b104.appspot.com',
-  messagingSenderId: '897656003008'
+    apiKey: "AIzaSyCfR4PYhfL3UJ7BSK4uMhE3v1GawI4P4FA",
+    authDomain: "network-de.firebaseapp.com",
+    databaseURL: "https://network-de.firebaseio.com",
+    projectId: "network-de",
+    storageBucket: "network-de.appspot.com",
+    messagingSenderId: "329858263574"
 };
 
 @NgModule({

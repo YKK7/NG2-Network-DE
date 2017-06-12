@@ -10,6 +10,13 @@
    align-items: center;
    font-family: Montserrat, sans-serif;
  }
+ h5{
+   color: white;
+   background-color: #588c9f;
+   font-size: 26px !important;
+   align-items: center;
+   font-family: Montserrat, sans-serif;
+ }
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 500px;
