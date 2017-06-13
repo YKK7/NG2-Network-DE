@@ -72,12 +72,15 @@ constructor() { }
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
               bounds.union(place.geometry.viewport)
+              
       
             } else {
               bounds.extend(place.geometry.location);
             }
           });
           map.fitBounds(bounds);
+          map.setZoom(13);
+          
         });
 
     this.setAnimalMarkers(map);
@@ -264,7 +267,7 @@ constructor() { }
      var infoWindowContent = [
         ['<div class= "info content">' +
         '<h3> Brandywine Senior Center</h3>'+ 
-        '<p> Be an Excercise Class Companion:<br> Help assist in an exercise class.  Be a small-group instructor<p>'+
+        '<p> Be an Exercise Class Companion:<br> Help assist in an exercise class.  Be a small-group instructor<p>'+
         '<p><b>Date:</b>Saturday, July 8, 2017 </p>'+
         '<p><b>Time:</b>10:00AM-1:00PM</p>'+
         '<p><b>Contact:</b><a href="mailto:instructBrandywine@email.com">Rose Dewitt</a></p>'+

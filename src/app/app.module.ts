@@ -46,12 +46,12 @@ import { CreateProfileSuccessComponent } from './create-profile-success/create-p
 
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyClaQQH76XoSggCc2LoaG9vxtqhIY-OYOE',
-  authDomain: 'first-test-8b104.firebaseapp.com',
-  databaseURL: 'https://first-test-8b104.firebaseio.com',
-  projectId: 'first-test-8b104',
-  storageBucket: 'first-test-8b104.appspot.com',
-  messagingSenderId: '897656003008'
+  apiKey: "AIzaSyA-h-YI3NZQ7h2x3GN_NTFziHUA7chi8kI",
+    authDomain: "networkde-maps.firebaseapp.com",
+    databaseURL: "https://networkde-maps.firebaseio.com",
+    projectId: "networkde-maps",
+    storageBucket: "networkde-maps.appspot.com",
+    messagingSenderId: "327951643532"
 };
 
 @NgModule({
