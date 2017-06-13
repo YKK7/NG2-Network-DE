@@ -135,13 +135,13 @@ constructor() { }
 
     const image = {
       url: 'http://people.wm.edu/~mxblum/icons/zoo.png',
-      size: new google.maps.Size(30, 40),
+      size: new google.maps.Size(40, 37),
       origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(0, 32)
+      anchor: new google.maps.Point(0, 37)
     };
 
     const shape = {
-      coords: [1, 1, 1, 20, 18, 20, 18, 1],
+      coords: [1, 1, 1, 20, 18, 40, 18, 1],
       type: 'poly'
     };
 
